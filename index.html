@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="mars.css">
+    <title>Landing Page</title>
+</head>
+<body>
+    <div class="jumbotron jumbotron-fluid" style="padding-top: 20px; padding-bottom: 15px; margin-top: 20px; background-color: rgb(221, 212, 212);">
+        <div class="container text-center">
+            <img src="https://www1.villanova.edu/content/dam/villanova/sites/magazine/assets/imgs/mars/mars-planet.png" width="100">
+        </div>
+        <h1 class="display-4" style="text-align: center; color: rgb(148, 43, 11);"><b>Mission to Mars</b></h1>
+        <p class="lead" style="text-align: center;"><b>Click below for the latest info on our planetary neighbor!</b></p>
+        <hr class="my-6">
+        <p class="lead">
+            <div class="container" style="text-align: center;">
+                <a class="btn btn-primary btn-lg" href="/scrape" role="button" style="align-items: center;">Scrape Mars Data</a>
+            </div>
+        </p>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto" style="margin-bottom: 25px;">
+                <h3 style="color: rgb(29, 29, 29);">Latest Mars News</h3>
+                <p style="color: rgb(29, 29, 29);"><b>{{mars_collection.news_title}}: </b>{{mars_collection.news_paragraph}}</p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto" style="margin-bottom: 25px;">
+                <h3 style="color: rgb(29, 29, 29);">Current Mars Weather</h3>
+                <p>{{mars_collection.latest_tweet}}</p>  
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto" style="margin-bottom: 25px;">
+                <h3 style="color: rgb(29, 29, 29);">Today's Featured Image of Mars</h3>
+                <img style="width: max-content;" class="big-img" src="{{mars_collection.image_url}}">
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto" style="margin-bottom: 25px;">
+                <h3 style="color: rgb(29, 29, 29);">Key Mars Facts</h3>
+                <div>{{mars_collection.html_facts_table}}</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h3 style="color: rgb(29, 29, 29);">Hemispheres of Mars</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto" style="margin-bottom: 10px;">
+                <img style="width: max-content" class="big-img" src="{{mars_collection.cerberus_url}}">
+                <div class="caption">
+                    <p>{{mars_collection.cerberus_title}}</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto" style="margin-bottom: 10px;">
+                <img style="width: max-content" class="big-img" src="{{mars_collection.schiaparelli_url}}">
+                <div class="caption">
+                    <p>{{mars_collection.schiaparelli_title}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto" style="margin-bottom: 10px;">
+                <img style="width: max-content" class="big-img" src="{{mars_collection.syrtis_url}}">
+                <div class="caption">
+                    <p>{{mars_collection.syrtis_title}}</p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto" style="margin-bottom: 10px;">
+                <img style="width: max-content" class="big-img" src="{{mars.collection.valles_url}}">
+                <div class="caption">
+                    <p>{{mars_collection.valles_title}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
