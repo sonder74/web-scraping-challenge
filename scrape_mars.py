@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 from splinter import Browser
 import requests
 import pandas as pd
+import time
 
 #########################
 # Define scrape function
@@ -21,6 +22,7 @@ def scrape():
     browser = Browser('chrome', **executable_path, headless=False)
     news_url = "https://mars.nasa.gov/news/"
     browser.visit(news_url)
+    time.sleep(5)
     news_html = browser.html
     news_soup = BeautifulSoup(news_html, "html.parser")
     browser.quit()
@@ -45,6 +47,7 @@ def scrape():
     browser = Browser('chrome', **executable_path, headless=False)
     image_url = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
     browser.visit(image_url)
+    time.sleep(5)
     image_html = browser.html
     image_soup = BeautifulSoup(image_html, "html.parser")
     browser.quit()
@@ -68,6 +71,7 @@ def scrape():
     browser = Browser('chrome', **executable_path, headless=False)
     twitter_url = "https://twitter.com/marswxreport?lang=en"
     browser.visit(twitter_url)
+    time.sleep(5)
     twitter_html = browser.html
     twitter_soup = BeautifulSoup(twitter_html, "html.parser")
     browser.quit()
@@ -110,6 +114,7 @@ def scrape():
     browser = Browser('chrome', **executable_path, headless=False)
     cerberus_url = "https://astrogeology.usgs.gov/search/map/Mars/Viking/cerberus_enhanced"
     browser.visit(cerberus_url)
+    time.sleep(5)
     cerberus_html = browser.html
     cerberus_soup = BeautifulSoup(cerberus_html, "html.parser")
     browser.quit()
@@ -139,6 +144,7 @@ def scrape():
     browser = Browser('chrome', **executable_path, headless=False)
     schiaparelli_url ="https://astrogeology.usgs.gov/search/map/Mars/Viking/schiaparelli_enhanced"
     browser.visit(schiaparelli_url)
+    time.sleep(5)
     schiaparelli_html = browser.html
     schiaparelli_soup = BeautifulSoup(schiaparelli_html, "html.parser")
     browser.quit()
@@ -167,6 +173,8 @@ def scrape():
     executable_path = {'executable_path': '/usr/local/bin/chromedriver'}
     browser = Browser('chrome', **executable_path, headless=False)
     syrtis_url ="https://astrogeology.usgs.gov/search/map/Mars/Viking/syrtis_major_enhanced"
+    browser.visit(syrtis_url)
+    time.sleep(5)
     syrtis_html = browser.html
     syrtis_soup = BeautifulSoup(syrtis_html, "html.parser")
     browser.quit()
@@ -196,6 +204,7 @@ def scrape():
     browser = Browser('chrome', **executable_path, headless=False)
     valles_url ="https://astrogeology.usgs.gov/search/map/Mars/Viking/valles_marineris_enhanced"
     browser.visit(valles_url)
+    time.sleep(5)
     valles_html = browser.html
     valles_soup = BeautifulSoup(valles_html, "html.parser")
     browser.quit()
@@ -250,8 +259,6 @@ def scrape():
     
     return scrape_data
 
-if __name__ == "__main__":
-    print(scrape())
 
         
 

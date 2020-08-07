@@ -3,36 +3,37 @@
 ######################
 
 from flask import Flask, render_template
-from flask_pymongo import PyMongo
 import scrape_mars
+import pymongo
 
 ############################
 # Configure Flask and Mongo
 ############################
 
 app = Flask(__name__)
-conn = "mongodb://127.0.0.1:27017"
+conn = "mongodb://localhost:27017"
 client = pymongo.MongoClient(conn)
-mars_db = client.mars_db
-mars_collection = mars_db.mars_collection
+db = client.mars_db
+mars_collection = db.items
 
 ####################
 # Configure routes
 ####################
 
+@app.route("/")
+def home():
+    mars_collection = db.items.find_one()
+    return render_template("index.html", mars_collection=mars_collection)
+
 @app.route("/scrape")
 def scrape_new_data():
     mars_dict = scrape_mars.scrape()
     mars_collection.update({}, mars_dict, upsert=True)
-    return "Scrape Complete"
+    return "Scraping complete. Hit the back button to view results!"
 
-@app.route("/")
-def home():
-    mars_collection = mongo.db.mars.find_one()
-    return render_template("index.html", mars_collection=mars_collection)
 
-if __name__ == "__main__":
-    app.run()
+if __name__ == '__main__':
+    app.run(debug=False)
 
 
 

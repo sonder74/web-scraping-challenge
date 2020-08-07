@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="mars.css">
     <title>Landing Page</title>
 </head>
 <body>
@@ -24,38 +23,48 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto" style="margin-bottom: 25px;">
+                <br>
                 <h3 style="color: rgb(29, 29, 29);">Latest Mars News</h3>
+                <br>
                 <p style="color: rgb(29, 29, 29);"><b>{{mars_collection.news_title}}: </b>{{mars_collection.news_paragraph}}</p>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto" style="margin-bottom: 25px;">
+                <br>
                 <h3 style="color: rgb(29, 29, 29);">Current Mars Weather</h3>
+                <br>
                 <p>{{mars_collection.latest_tweet}}</p>  
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto" style="margin-bottom: 25px;">
+                <br>
                 <h3 style="color: rgb(29, 29, 29);">Today's Featured Image of Mars</h3>
-                <img style="width: max-content;" class="big-img" src="{{mars_collection.image_url}}">
+                <br>
+                <img style="max-width: 500px" src="{{mars_collection.image_url}}">
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto" style="margin-bottom: 25px;">
+                <br>
                 <h3 style="color: rgb(29, 29, 29);">Key Mars Facts</h3>
-                <div>{{mars_collection.html_facts_table}}</div>
+                <br>
+                <div>{{mars_collection.html_facts_table | safe}}</div>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <br>
                 <h3 style="color: rgb(29, 29, 29);">Hemispheres of Mars</h3>
+                <br>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto" style="margin-bottom: 10px;">
-                <img style="width: max-content" class="big-img" src="{{mars_collection.cerberus_url}}">
+                <img style="max-width: 500px" src="{{mars_collection.cerberus_url}}">
                 <div class="caption">
                     <p>{{mars_collection.cerberus_title}}</p>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto" style="margin-bottom: 10px;">
-                <img style="width: max-content" class="big-img" src="{{mars_collection.schiaparelli_url}}">
+                <img style="max-width: 500px" src="{{mars_collection.schiaparelli_url}}">
                 <div class="caption">
                     <p>{{mars_collection.schiaparelli_title}}</p>
                 </div>
@@ -63,13 +72,13 @@
         </div>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto" style="margin-bottom: 10px;">
-                <img style="width: max-content" class="big-img" src="{{mars_collection.syrtis_url}}">
+                <img style="max-width: 500px" src="{{mars_collection.syrtis_url}}">
                 <div class="caption">
                     <p>{{mars_collection.syrtis_title}}</p>
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 mx-auto" style="margin-bottom: 10px;">
-                <img style="width: max-content" class="big-img" src="{{mars.collection.valles_url}}">
+                <img style="max-width: 500px" src="{{mars_collection.valles_url}}">
                 <div class="caption">
                     <p>{{mars_collection.valles_title}}</p>
                 </div>
