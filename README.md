@@ -20,7 +20,5 @@ I loved this project! It drew together nearly all of the disciplines that our cl
 ## Coding Screenshots
 ![mars_scrape](screenshots/mars_scrape.png)
 <br>
-![matplotlib_screenshot](screenshots/matplotlib_screenshot.png)
-<br>
-![flask_screnshot](screenshots/flask_screenshot.png)
+![mars_flask](screenshots/mars_flask.png)
 
