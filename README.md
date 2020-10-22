@@ -6,10 +6,11 @@
  1. [Project Goals](#project-goals)
  2. [Tools and Solutions](#tools-and-solutions)
  3. [Outcomes and Lessons Learned](#outcomes-and-lessons-learned)
- 4. [Coding Screenshots](#coding-screenshots)
+ 4. [App Screenshots](#app-screenshots)
+ 5. [Coding Screenshots](#coding-screenshots)
 
 ## Project Goals
-With this project, I returned to the subect of global climate, beginning with the exploration and analysis of a large set of weather data. Once that analysis was complete and a new set of data tables created, I had to design queries using a methodology new to me: <a href="https://www.sqlalchemy.org/">SQLAlchemy</a>.
+This was my most challenging assignment to date! I had to master the art of web scraping, which requires the creation of a <a href="https://www.python.org/">Python</a>-driven program that pulls live data from third-party websites, Twitter accounts, and other online sources.
 
 ## Tools and Solutions
 The first step in my data-gathering process was designing a connection to an <a href="https://www.sqlite.org/index.html">SQLite</a> database provided by the instructor. I used <a href="https://pandas.pydata.org/">Pandas</a> and <a href="https://matplotlib.org/">Matplotlib</a> to wrangle and visualize it contents, and then I created <a href="https://hackersandslackers.com/flask-routes/">Flask API routes</a> that returned <a href="https://www.json.org/json-en.html">JSON</a> lists when queried. I also completed the bonus assignments, using Matplotlib to visualize a series of statistical analyses of the temperature-related data.
