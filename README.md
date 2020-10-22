@@ -1,5 +1,5 @@
 
-# SQLAlchemy Challenge (Grade: A+)
+# Web Scraping Challenge (Grade: A)
  
 ### Table of Contents:
 
